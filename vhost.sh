@@ -21,6 +21,11 @@ chmod g+w /var/www/$DOMAIN_NAME/logs
 ## create httpd-vhots.conf
 echo "create /etc/httpd/conf.d/$DOMAIN_NAME.conf"
 cat << EOS > /etc/httpd/conf.d/$DOMAIN_NAME.conf
+# <VirtualHost *:80>
+#     ServerName example.com
+#     RedirectMatch 301 \/(.*) $DOMAIN_NAME/$1
+# </VirtualHost>
+
 <VirtualHost *:80>
     ServerName $DOMAIN_NAME
     DocumentRoot "/var/www/$DOMAIN_NAME/public" 
@@ -71,7 +76,11 @@ cat << EOS > /var/www/$DOMAIN_NAME/public/.htaccess
 
 
 AddDefaultCharset UTF-8
-#AddType text/cache-manifest .appcache
+# AddType text/cache-manifest .appcache
+# AddType image/svg+xml .svg
+# AddType font/woff .woff
+# AddType font/ttf .ttf
+# AddType video/mp4 .mp4
 EOS
 
 
