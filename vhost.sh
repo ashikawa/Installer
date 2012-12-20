@@ -81,6 +81,7 @@ AddDefaultCharset UTF-8
 # AddType font/woff .woff
 # AddType font/ttf .ttf
 # AddType video/mp4 .mp4
+# AddType application/vnd.android.package-archive .apk
 EOS
 
 
