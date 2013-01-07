@@ -49,3 +49,9 @@ wget "https://www.dropbox.com/s/if5x3frcwqas6ef/wordpress.sh?dl=1" -O /tmp/wordp
 ```
 wget "https://www.dropbox.com/s/w9pwfq0msrd1qcy/chroot.sh?dl=1" -O /tmp/chroot.sh && sh /tmp/chroot.sh
 ```
+
+## Memcached
+
+```
+wget "https://www.dropbox.com/s/xbo89gzzzebt30b/memcached.sh?dl=1" -O /tmp/memcached.sh && sh /tmp/memcached.sh
+```
