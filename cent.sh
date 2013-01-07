@@ -3,8 +3,8 @@
 echo "yum -y update"
 yum -y update
 
-echo "yum install -y gcc gcc-c++ make openssl-devel git subversion"
-yum install -y gcc gcc-c++ make openssl-devel git subversion
+echo "yum install -y gcc gcc-c++ make openssl-devel git subversion telnet"
+yum install -y gcc gcc-c++ make openssl-devel git subversion telnet
 
 # SE Linux のオフ
 setenforce 0
