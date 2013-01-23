@@ -27,8 +27,8 @@ Header append Vary User-Agent env=!dont-vary
 EOS
 
 ## set permission
-echo "chown -R apache:apache $CONFIGFILE"
-chown -R apache:apache $CONFIGFILE
+echo "chown apache:apache $CONFIGFILE"
+chown apache:apache $CONFIGFILE
 
 ## httpd restart
 echo "/etc/init.d/httpd graceful"
