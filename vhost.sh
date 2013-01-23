@@ -74,14 +74,7 @@ cat << EOS > /var/www/$DOMAIN_NAME/public/.htaccess
 #SetEnvIf User-Agent "^facebookplatform.*$" fb_crawler
 #Allow from env=fb_crawler
 
-
 AddDefaultCharset UTF-8
-# AddType text/cache-manifest .appcache
-# AddType image/svg+xml .svg
-# AddType font/woff .woff
-# AddType font/ttf .ttf
-# AddType video/mp4 .mp4
-# AddType application/vnd.android.package-archive .apk
 EOS
 
 

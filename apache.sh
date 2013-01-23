@@ -25,12 +25,29 @@ echo "set expires header"
 EXPIRES="/etc/httpd/conf.d/expires.conf"
 
 cat << EOS > $EXPIRES
-<FilesMatch "\.(gif|jpe?g|js|css)$">
+<FilesMatch "\.(gif|jpe?g|png|js|css)$">
     ExpiresActive On
     ExpiresDefault "access plus 7 days"
 </FilesMatch>
 EOS
 chown apache:apache $EXPIRES
+
+
+# mimetypes の追加
+echo "add mimetypes"
+MIME="/etc/httpd/conf.d/mimes.conf"
+
+cat << EOS > $MIME
+<IfModule mime_module>
+    AddType text/cache-manifest .appcache
+    AddType image/svg+xml .svg
+    AddType font/woff .woff
+    AddType font/ttf .ttf
+    AddType video/mp4 .mp4
+    AddType application/vnd.android.package-archive .apk
+</IfModule>
+EOS
+chown apache:apache $MIME
 
 
 # Apache の再起動
