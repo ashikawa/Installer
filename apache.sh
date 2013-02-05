@@ -15,9 +15,18 @@ sed -i -e 's#Alias /icons/ "/var/www/icons/"#\#Alias /icons/ "/var/www/icons/"#g
 sed -i -e 's#ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"#\#ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"#g' $CONFIGFILE
 sed -i -e 's#Alias /error/ "/var/www/error/"#\#Alias /error/ "/var/www/error/"#g' $CONFIGFILE
 
+
 # その他設定の追加
 echo "add TraceEnable Off"
-echo "TraceEnable Off" >> $CONFIGFILE
+cat << EOS > /etc/httpd/conf.d/notrace.conf
+# This directive overrides the behavior of TRACE for both the core server and
+# mod_proxy. The default TraceEnable on permits TRACE requests per RFC 2616,
+# which disallows any request body to accompany the request. TraceEnable off
+# causes the core server and mod_proxy to return a 405 (Method not allowed)
+# error to the client.
+TraceEnable off
+EOS
+chown apache:apache /etc/httpd/conf.d/notrace.conf
 
 
 # キャッシュヘッダの設定
