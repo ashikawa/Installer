@@ -14,6 +14,7 @@
 
     useradd -g apache $USERNAME
     echo "umask 002" >> /home/$USERNAME/.bashrc
+    ln -s /var/www/$DOMAIN_NAME/public/ /home/$USERNAME/public
 
 ### Apache VirtualHost
 
@@ -26,6 +27,19 @@
 ## MySql
 
     wget "https://www.dropbox.com/s/su7ebh0yrzd7zbc/mysql.sh?dl=1" -O /tmp/mysql.sh && sh /tmp/mysql.sh
+
+ユーザーの追加
+
+    mysql -u root
+
+    SET PASSWORD FOR root@localhost=PASSWORD('new_password');
+    GRANT ALL PRIVILEGES ON *.* TO newuser@localhost IDENTIFIED BY 'new_password';
+    FLUSH PRIVILEGES;
+
+    -- 外部からのアクセス
+    GRANT ALL PRIVILEGES ON *.* TO newuser@"% IDENTIFIED BY 'new_password';
+
+    CREATE DATABASE $DB_NAME;
 
 ## PHP
 

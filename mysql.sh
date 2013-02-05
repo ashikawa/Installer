@@ -27,16 +27,6 @@ default-character-set = utf8
 default-character-set = utf8
 EOS
 
-echo "Enter MySQL root user pass:"
-read ROOT_PASS
-while [ "$ROOT_PASS" == "" ]
-do
-	read ROOT_PASS
-done
-
-echo "/usr/bin/mysqladmin -u root password $ROOT_PASS"
-/usr/bin/mysqladmin -u root password $ROOT_PASS
-
 echo "chkconfig mysqld on"
 chkconfig mysqld on
 
