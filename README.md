@@ -92,3 +92,11 @@ HealthCheck
     echo "success";
     EOS
 
+## PhpMyAdmin
+
+    yum --enablerepo=remi install phpMyAdmin
+
+config
+
+    vi /etc/httpd/cond.d/phpMyAdmin.conf
+    # アクセス制限を調整
