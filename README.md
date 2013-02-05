@@ -30,6 +30,12 @@
 
     wget "https://www.dropbox.com/s/if5x3frcwqas6ef/wordpress.sh?dl=1" -O /tmp/wordpress.sh && sh /tmp/wordpress.sh
 
+### FTP設定
+
+wp-config.php に追記
+
+    define('FS_METHOD', 'direct');
+
 ## Chroot
 
     wget "https://www.dropbox.com/s/w9pwfq0msrd1qcy/chroot.sh?dl=1" -O /tmp/chroot.sh && sh /tmp/chroot.sh
