@@ -10,6 +10,11 @@
 
     wget "https://www.dropbox.com/s/zads77926xhezrx/apache.sh?dl=1" -O /tmp/apache.sh && sh /tmp/apache.sh
 
+作業ユーザーの追加
+
+    useradd -g apache $USERNAME
+    echo "umask 002" >> /home/$USERNAME/.bashrc
+
 ### Apache VirtualHost
 
     wget "https://www.dropbox.com/s/ujvnst2kjp5g07n/vhost.sh?dl=1" -O /tmp/vhost.sh && sh /tmp/vhost.sh
@@ -43,3 +48,12 @@ wp-config.php に追記
 ## Memcached
 
     wget "https://www.dropbox.com/s/xbo89gzzzebt30b/memcached.sh?dl=1" -O /tmp/memcached.sh && sh /tmp/memcached.sh
+
+
+## AWS EC2
+
+パスワードによるログインを許可
+
+    sed -i -e 's#PasswordAuthentication no#PasswordAuthentication yes#g' /etc/ssh/sshd_config
+    /etc/init.d/sshd restart
+
