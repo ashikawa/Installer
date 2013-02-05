@@ -71,3 +71,14 @@ wp-config.php に追記
     sed -i -e 's#PasswordAuthentication no#PasswordAuthentication yes#g' /etc/ssh/sshd_config
     /etc/init.d/sshd restart
 
+HealthCheck
+
+    cat << EOS  > /etc/httpd/conf.d/healthcheck.conf
+        Alias /healthcheck /var/www/healthcheck
+    EOS
+
+    cat << EOS  > /var/www/healthcheck/index.php
+    <?php
+    echo "success";
+    EOS
+
