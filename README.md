@@ -23,6 +23,7 @@
 作業ユーザーの追加
 
     useradd -g apache $USERNAME
+    passwd $USERNAME
     echo "umask 002" >> /home/$USERNAME/.bashrc
     ln -s /var/www/$DOMAIN_NAME/public/ /home/$USERNAME/public
 
