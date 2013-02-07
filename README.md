@@ -40,9 +40,9 @@
 
 ユーザーの追加
 
-    mysql -u root
+    mysql -u mysql
 
-    SET PASSWORD FOR root@localhost=PASSWORD('new_password');
+    SET PASSWORD FOR mysql@localhost=PASSWORD('new_password');
     GRANT ALL PRIVILEGES ON *.* TO newuser@localhost IDENTIFIED BY 'new_password';
     FLUSH PRIVILEGES;
 
