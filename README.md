@@ -26,6 +26,7 @@
     passwd $USERNAME
     echo "umask 002" >> /home/$USERNAME/.bashrc
     ln -s /var/www/$DOMAIN_NAME/public/ /home/$USERNAME/public
+    chown $USERNAME:$USERNAME /home/$USERNAME/public
 
 ### Apache VirtualHost
 
