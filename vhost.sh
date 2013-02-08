@@ -77,11 +77,10 @@ cat << EOS > /var/www/$DOMAIN_NAME/public/.htaccess
 AddDefaultCharset UTF-8
 EOS
 
-
 ## set permission
 echo "chown -R apache:apache /var/www/$DOMAIN_NAME"
 chown -R apache:apache /var/www/$DOMAIN_NAME
-
+chmod g+w -R /var/www/$DOMAIN_NAME
 
 ## httpd restart
 echo "/etc/init.d/httpd graceful"
