@@ -11,21 +11,14 @@ done
 ## DocumentRoot
 echo "mkdir -p /var/www/$DOMAIN_NAME/public"
 mkdir -p /var/www/$DOMAIN_NAME/public
-chmod g+w /var/www/$DOMAIN_NAME/public
 
 ## log dir
 echo "mkdir -p /var/www/$DOMAIN_NAME/logs"
 mkdir -p /var/www/$DOMAIN_NAME/logs
-chmod g+w /var/www/$DOMAIN_NAME/logs
 
 ## create httpd-vhots.conf
 echo "create /etc/httpd/conf.d/$DOMAIN_NAME.conf"
 cat << EOS > /etc/httpd/conf.d/$DOMAIN_NAME.conf
-# <VirtualHost *:80>
-#     ServerName example.com
-#     RedirectMatch 301 \/(.*) $DOMAIN_NAME/$1
-# </VirtualHost>
-
 <VirtualHost *:80>
     ServerName $DOMAIN_NAME
     DocumentRoot "/var/www/$DOMAIN_NAME/public" 
