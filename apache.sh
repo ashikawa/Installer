@@ -60,6 +60,16 @@ cat << EOS > $MIME
 EOS
 chown apache:apache $MIME
 
+echo "ltsv log"
+LTSV="/etc/httpd/conf.d/ltsv.conf"
+car << EOS > $LTSV
+# LTSV combined log
+# @see http://ltsv.org/
+#
+LogFormat "time:%t\tforwardedfor:%{X-Forwarded-For}i\thost:%h\treq:%r\tstatus:%>s\tsize:%b\treferer:%{Referer}i\tua:%{User-Agent}i\treqtime_microsec:%D\tcache:%{X-Cache}o\truntime:%{X-Runtime}o\tvhost:%{Host}i" ltsv
+# CustomLog logs/access_log ltsv
+EOS
+chown apache:apache $LTSV
 
 # Apache の再起動
 echo "/etc/init.d/httpd restart"
