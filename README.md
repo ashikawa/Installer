@@ -29,7 +29,8 @@
     chown $USERNAME:$USERNAME /home/$USERNAME/public
     
     vi /etc/ssh/sshd_conf
-    Subsystem       sftp    /usr/libexec/openssh/sftp-server –u 002
+    # Subsystem       sftp    /usr/libexec/openssh/sftp-server –u 002
+    Subsystem sftp internal-sftp -u 0002
 
 
 ### Apache VirtualHost
