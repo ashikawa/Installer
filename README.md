@@ -99,6 +99,11 @@ HealthCheck
     echo "success";
     EOS
 
+.htaccess
+
+    SetEnvIf X-Forwarded-For "221.242.187.18" allowedip
+    Allow from env=allowedip
+
 ## PhpMyAdmin
 
     yum --enablerepo=remi install phpMyAdmin
