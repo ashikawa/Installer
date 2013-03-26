@@ -101,7 +101,7 @@ HealthCheck
 
 .htaccess
 
-    SetEnvIf X-Forwarded-For "221.242.187.18" allowedip
+    SetEnvIf X-Forwarded-For "xxx.xxx.xxx.xxx" allowedip
     Allow from env=allowedip
 
 ## PhpMyAdmin
