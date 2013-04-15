@@ -73,6 +73,13 @@ wp-config.php に追記
 
     define('FS_METHOD', 'direct');
 
+### パーミッション設定
+
+wp-config.php に追記
+
+    define('FS_CHMOD_DIR', 0775);
+    define('FS_CHMOD_FILE', 0664);
+
 ## Chroot
 
     wget "https://www.dropbox.com/s/w9pwfq0msrd1qcy/chroot.sh?dl=1" -O /tmp/chroot.sh && sh /tmp/chroot.sh
