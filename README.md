@@ -94,7 +94,8 @@ HealthCheck
     cat << EOS  > /etc/httpd/conf.d/healthcheck.conf
         Alias /healthcheck /var/www/healthcheck
     EOS
-
+    
+    mkdir /var/www/healthcheck
     cat << EOS  > /var/www/healthcheck/index.php
     <?php
     echo "success";
