@@ -55,7 +55,7 @@
     FLUSH PRIVILEGES;
 
     -- 外部からのアクセス
-    GRANT ALL PRIVILEGES ON *.* TO newuser@"% IDENTIFIED BY 'new_password';
+    GRANT ALL PRIVILEGES ON *.* TO newuser@"%" IDENTIFIED BY 'new_password';
 
     CREATE DATABASE $DB_NAME;
 
