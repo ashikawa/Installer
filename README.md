@@ -28,7 +28,7 @@
     ln -s /var/www/$DOMAIN_NAME/public/ /home/$USERNAME/public
     chown $USERNAME:$USERNAME /home/$USERNAME/public
     
-    vi /etc/ssh/sshd_conf
+    vi /etc/ssh/sshd_config
     # Subsystem       sftp    /usr/libexec/openssh/sftp-server –u 002
     Subsystem sftp internal-sftp -u 0002
 
