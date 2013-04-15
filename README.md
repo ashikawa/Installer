@@ -32,6 +32,7 @@
     # Subsystem       sftp    /usr/libexec/openssh/sftp-server –u 002
     Subsystem sftp internal-sftp -u 0002
 
+    /etc/init.d/sshd restart
 
 ### Apache VirtualHost
 
