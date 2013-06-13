@@ -28,7 +28,11 @@ cat << EOS > /etc/httpd/conf.d/$DOMAIN_NAME.conf
 	
 #    CustomLog /var/www/$DOMAIN_NAME/logs/access_log combined
 #    ErrorLog  /var/www/$DOMAIN_NAME/logs/error_log 
-	
+
+# for debug
+#    RewriteLog /tmp/rewrite.log
+#    RewriteLogLevel 9
+
     <Directory "/var/www/$DOMAIN_NAME/public">
         Options -Indexes FollowSymLinks
         order deny,allow
