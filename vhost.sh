@@ -21,7 +21,7 @@ echo "create /etc/httpd/conf.d/$DOMAIN_NAME.conf"
 cat << EOS > /etc/httpd/conf.d/$DOMAIN_NAME.conf
 #<VirtualHost *:80>
 #    ServerName $DOMAIN_NAME
-#    RedirectMatch 301 \/(.*) $DOMAIN_NAME/$1
+#    RedirectMatch 301 \/(.*) http://$DOMAIN_NAME/$1
 #</VirtualHost>
 <VirtualHost *:80>
     ServerName $DOMAIN_NAME
@@ -29,7 +29,7 @@ cat << EOS > /etc/httpd/conf.d/$DOMAIN_NAME.conf
 
     CustomLog "|/usr/sbin/rotatelogs /var/www/$DOMAIN_NAME/logs/access_log_%Y%m%d 86400 540" combined
     ErrorLog  "|/usr/sbin/rotatelogs /var/www/$DOMAIN_NAME/logs/error_log_%Y%m%d 86400 540" 
-	
+
 #    CustomLog /var/www/$DOMAIN_NAME/logs/access_log combined
 #    ErrorLog  /var/www/$DOMAIN_NAME/logs/error_log 
 
