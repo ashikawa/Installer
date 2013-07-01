@@ -19,10 +19,14 @@ mkdir -p /var/www/$DOMAIN_NAME/logs
 ## create httpd-vhots.conf
 echo "create /etc/httpd/conf.d/$DOMAIN_NAME.conf"
 cat << EOS > /etc/httpd/conf.d/$DOMAIN_NAME.conf
+#<VirtualHost *:80>
+#    ServerName $DOMAIN_NAME
+#    RedirectMatch 301 \/(.*) $DOMAIN_NAME/$1
+#</VirtualHost>
 <VirtualHost *:80>
     ServerName $DOMAIN_NAME
     DocumentRoot "/var/www/$DOMAIN_NAME/public" 
-	
+
     CustomLog "|/usr/sbin/rotatelogs /var/www/$DOMAIN_NAME/logs/access_log_%Y%m%d 86400 540" combined
     ErrorLog  "|/usr/sbin/rotatelogs /var/www/$DOMAIN_NAME/logs/error_log_%Y%m%d 86400 540" 
 	
