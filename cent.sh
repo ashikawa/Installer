@@ -3,8 +3,8 @@
 echo "yum -y update"
 yum -y update
 
-echo "yum install -y gcc gcc-c++ make openssl-devel git subversion telnet mailx"
-yum install -y gcc gcc-c++ make openssl-devel git subversion telnet
+echo "yum install -y gcc gcc-c++ make openssl-devel git subversion telnet mailx sysstat"
+yum install -y gcc gcc-c++ make openssl-devel git subversion telnet sysstat
 
 echo "yum --enablerepo=epel -y install inotify-tools"
 yum --enablerepo=epel -y install inotify-tools
