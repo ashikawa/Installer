@@ -157,3 +157,14 @@ config
 vi /etc/httpd/cond.d/phpMyAdmin.conf
 # アクセス制限を調整
 ```
+
+## Nginx
+
+```sh
+# epel enabled=1
+yum -y install nginx
+
+/etc/init.d/nginx start
+chkconfig nginx on
+chkconfig --list
+```
