@@ -80,12 +80,6 @@ wget "https://www.dropbox.com/s/jo9dxyxnelw9r3r/mysql_user.sh?dl=1" -O /tmp/mysq
 wget "https://www.dropbox.com/s/6mpts33tjjwx6xh/php.sh?dl=1" -O /tmp/php.sh && sh /tmp/php.sh
 ```
 
-## WordPress
-
-```sh
-wget "https://www.dropbox.com/s/if5x3frcwqas6ef/wordpress.sh?dl=1" -O /tmp/wordpress.sh && sh /tmp/wordpress.sh
-```
-
 ### FTP設定
 
 wp-config.php に追記
