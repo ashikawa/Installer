@@ -48,6 +48,9 @@ Subsystem sftp internal-sftp -u 0002
 
 ```sh
 wget "https://www.dropbox.com/s/ujvnst2kjp5g07n/vhost.sh?dl=1" -O /tmp/vhost.sh && sh /tmp/vhost.sh
+
+# 簡易版
+wget "https://www.dropbox.com/s/4s96m0g5jolnta6/vhost.light.sh?dl=1" -O vhost.light.sh
 ```
 
 ### Apache deflate
@@ -78,6 +81,28 @@ wget "https://www.dropbox.com/s/jo9dxyxnelw9r3r/mysql_user.sh?dl=1" -O /tmp/mysq
 
 ```sh
 wget "https://www.dropbox.com/s/6mpts33tjjwx6xh/php.sh?dl=1" -O /tmp/php.sh && sh /tmp/php.sh
+```
+
+## WordPress
+
+```
+curl http://wp-cli.org/installer.sh | bash
+cd DOCUMENT_ROOT
+
+wp core download --locale=ja
+
+wp core config \
+    --dbhost=$DBHOST \
+    --dbname=$DBNAME \
+    --dbuser=$DBUSER \
+    --dbpass=$DBPASS
+ 
+wp core install \
+    --url=$SITE_DOMAIN \
+    --title=$SITE_TITLE \
+    --admin_name=$ADMIN_NAME \
+    --admin_email=admin@example.com \
+    --admin_password=password 
 ```
 
 ### FTP設定
