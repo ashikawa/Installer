@@ -5,6 +5,7 @@ yum install -y php php-devel php-cli php-mbstring php-pear php-xml php-gd php-my
 
 sed -i -e 's#memory_limit = .*M#memory_limit = 512M#g' /etc/php.ini
 sed -i -e 's#;date.timezone =#date.timezone = "Asia/Tokyo"#g' /etc/php.ini
+sed -i -e 's#expose_php =.*#expose_php = Off#g' /etc/php.ini
 
 echo "/etc/init.d/httpd restart"
 /etc/init.d/httpd restart
