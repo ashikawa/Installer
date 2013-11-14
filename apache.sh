@@ -14,6 +14,7 @@ echo "comment out default Aliases"
 sed -i -e 's#Alias /icons/ "/var/www/icons/"#\#Alias /icons/ "/var/www/icons/"#g' $CONFIGFILE
 sed -i -e 's#ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"#\#ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"#g' $CONFIGFILE
 sed -i -e 's#Alias /error/ "/var/www/error/"#\#Alias /error/ "/var/www/error/"#g' $CONFIGFILE
+sed -i -e 's#ServerTokens.*#ServerTokens ProductOnly#g' $CONFIGFILE
 
 echo "Name VirtualHost on"
 sed -i -e 's#\#NameVirtualHost \*:80#NameVirtualHost *:80#g' $CONFIGFILE
