@@ -187,3 +187,9 @@ yum -y install nginx
 chkconfig nginx on
 chkconfig --list
 ```
+
+## FTP
+
+```sh
+wget "https://www.dropbox.com/s/cub2k361cgz6gwd/ftp.sh?dl=1" -O /tmp/ftp.sh && sh /tmp/ftp.sh
+```
