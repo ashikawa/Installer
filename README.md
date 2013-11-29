@@ -8,19 +8,6 @@
 yum install -y wget && wget "https://www.dropbox.com/s/e40k1zoize0u005/cent.sh?dl=1" -O /tmp/cent.sh && sh /tmp/cent.sh
 ```
 
-リポジトリの追加
-
-```sh
-rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
-```
-
-手動で
-
-```sh
-vi /etc/yum.repos.d/remi.repo 
-enabled=1
-mirrorlist の $releasever を 6 に書き換え
-```
 
 ## Apache
 
