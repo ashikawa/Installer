@@ -19,6 +19,11 @@ sed -i -e 's#ServerTokens.*#ServerTokens ProductOnly#g' $CONFIGFILE
 echo "Name VirtualHost on"
 sed -i -e 's#\#NameVirtualHost \*:80#NameVirtualHost *:80#g' $CONFIGFILE
 
+# いらない conf ファイルをリネーム
+mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.org
+mv /etc/httpd/conf.d/proxy_ajp.conf /etc/httpd/conf.d/proxy_ajp.conf.org
+
+
 # その他設定の追加
 echo "add TraceEnable Off"
 cat << EOS > /etc/httpd/conf.d/notrace.conf
