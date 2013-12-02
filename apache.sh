@@ -72,7 +72,7 @@ car << EOS > $LTSV
 # LTSV combined log
 # @see http://ltsv.org/
 #
-LogFormat "time:%t\tforwardedfor:%{X-Forwarded-For}i\thost:%h\treq:%r\tstatus:%>s\tsize:%b\treferer:%{Referer}i\tua:%{User-Agent}i\treqtime_microsec:%D\tcache:%{X-Cache}o\truntime:%{X-Runtime}o\tvhost:%{Host}i" ltsv
+LogFormat "time:%{%d/%b/%Y:%H:%M:%S %z}t\tforwardedfor:%{X-Forwarded-For}i\thost:%h\tmethod:%m\tpath:%U%q\tprotocol:%H\tstatus:%>s\tsize:%b\treferer:%{Referer}i\tua:%{User-Agent}i\treqtime_microsec:%D\tcache:%{X-Cache}o\truntime:%{X-Runtime}o\tvhost:%{Host}i" ltsv
 # CustomLog logs/access_log ltsv
 EOS
 chown apache:apache $LTSV
