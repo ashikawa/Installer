@@ -5,14 +5,14 @@
 ## Cent Default init
 
 ```sh
-yum install -y wget && wget "https://www.dropbox.com/s/e40k1zoize0u005/cent.sh?dl=1" -O /tmp/cent.sh && sh /tmp/cent.sh
+yum install -y wget && wget "https://raw.github.com/m-s-modified/Installer/master/cent.sh" -O /tmp/cent.sh && sh /tmp/cent.sh
 ```
 
 
 ## Apache
 
 ```sh
-wget "https://www.dropbox.com/s/zads77926xhezrx/apache.sh?dl=1" -O /tmp/apache.sh && sh /tmp/apache.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/apache.sh" -O /tmp/apache.sh && sh /tmp/apache.sh
 ```
 
 作業ユーザーの追加
@@ -34,22 +34,22 @@ Subsystem sftp internal-sftp -u 0002
 ### Apache VirtualHost
 
 ```sh
-wget "https://www.dropbox.com/s/ujvnst2kjp5g07n/vhost.sh?dl=1" -O /tmp/vhost.sh && sh /tmp/vhost.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/vhost.sh" -O /tmp/vhost.sh && sh /tmp/vhost.sh
 
 # 簡易版
-wget "https://www.dropbox.com/s/4s96m0g5jolnta6/vhost.light.sh?dl=1" -O vhost.light.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/vhost.light.sh" -O vhost.light.sh
 ```
 
 ### Apache deflate
 
 ```sh
-wget "https://dl.dropbox.com/s/9gv3h7zh06elyhr/deflate.sh?dl=1" -O /tmp/deflate.sh && sh /tmp/deflate.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/deflate.sh" -O /tmp/deflate.sh && sh /tmp/deflate.sh
 ```
 
 ## MySql
 
 ```sh
-wget "https://www.dropbox.com/s/su7ebh0yrzd7zbc/mysql.sh?dl=1" -O /tmp/mysql.sh && sh /tmp/mysql.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/mysql.sh" -O /tmp/mysql.sh && sh /tmp/mysql.sh
 ```
 
 初期設定
@@ -61,13 +61,13 @@ mysql_secure_installation
 ### Mysql UserAdd
 
 ```sh
-wget "https://www.dropbox.com/s/jo9dxyxnelw9r3r/mysql_user.sh?dl=1" -O /tmp/mysql_user.sh.sh && sh /tmp/mysql_user.sh.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/mysql_user.sh" -O /tmp/mysql_user.sh && sh /tmp/mysql_user.sh
 ```
 
 ## PHP
 
 ```sh
-wget "https://www.dropbox.com/s/6mpts33tjjwx6xh/php.sh?dl=1" -O /tmp/php.sh && sh /tmp/php.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/php.sh" -O /tmp/php.sh && sh /tmp/php.sh
 ```
 
 ## WordPress
@@ -112,13 +112,13 @@ define('FS_CHMOD_FILE', 0664);
 ## Chroot
 
 ```sh
-wget "https://www.dropbox.com/s/w9pwfq0msrd1qcy/chroot.sh?dl=1" -O /tmp/chroot.sh && sh /tmp/chroot.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/chroot.sh" -O /tmp/chroot.sh && sh /tmp/chroot.sh
 ```
 
 ## Memcached
 
 ```sh
-wget "https://www.dropbox.com/s/xbo89gzzzebt30b/memcached.sh?dl=1" -O /tmp/memcached.sh && sh /tmp/memcached.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/memcached.sh" -O /tmp/memcached.sh && sh /tmp/memcached.sh
 ```
 
 ## AWS EC2
@@ -178,5 +178,5 @@ chkconfig --list
 ## FTP
 
 ```sh
-wget "https://www.dropbox.com/s/cub2k361cgz6gwd/ftp.sh?dl=1" -O /tmp/ftp.sh && sh /tmp/ftp.sh
+wget "https://raw.github.com/m-s-modified/Installer/master/ftp.sh" -O /tmp/ftp.sh && sh /tmp/ftp.sh
 ```
