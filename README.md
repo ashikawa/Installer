@@ -8,6 +8,11 @@
 yum install -y wget && wget "https://raw.github.com/m-s-modified/Installer/master/cent.sh" -O /tmp/cent.sh && sh /tmp/cent.sh
 ```
 
+公開鍵を追加
+
+```sh
+curl https://github.com/m-s-modified.keys >> ~/.ssh/authorized_keys
+```
 
 ## Apache
 
