@@ -68,7 +68,7 @@ chown apache:apache $MIME
 
 echo "ltsv log"
 LTSV="/etc/httpd/conf.d/ltsv.conf"
-car << EOS > $LTSV
+cat << EOS > $LTSV
 # LTSV combined log
 # @see http://ltsv.org/
 #
