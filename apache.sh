@@ -66,6 +66,8 @@ cat << EOS > $MIME
 EOS
 chown apache:apache $MIME
 
+
+# LTSV カスタムログ
 echo "ltsv log"
 LTSV="/etc/httpd/conf.d/ltsv.conf"
 cat << EOS > $LTSV
@@ -76,6 +78,20 @@ LogFormat "time:%{%d/%b/%Y:%H:%M:%S %z}t\tforwardedfor:%{X-Forwarded-For}i\thost
 # CustomLog logs/access_log ltsv
 EOS
 chown apache:apache $LTSV
+
+
+# LTSV パーサー
+echo "ltsv parser"
+PARSER="/usr/local/bin/ltsv"
+cat << EOS > $PARSER
+#!/usr/bin/env ruby
+while gets
+  record = Hash[$_.split("\t").map{|f| f.split(":", 2)}]
+  p record
+end
+EOS
+
+chmod +x $PARSER
 
 # Apache の再起動
 echo "/etc/init.d/httpd restart"
