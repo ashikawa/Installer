@@ -13,12 +13,12 @@ cd s3fs-1.62/
 make
 make install
 
-echo $AWS_API:$AWS_SECRET >> /etc/passwd-s3fs
+# echo $AWS_API:$AWS_SECRET >> /etc/passwd-s3fs
 
-mkdir /mnt/s3
+# mkdir /mnt/s3
 
-cat << EOS >> /etc/fstab
-s3fs#$BUCKET_NAME /mnt/s3 fuse allow_other 0 0
-EOS
+# cat << EOS >> /etc/fstab
+# s3fs#$BUCKET_NAME /mnt/s3 fuse allow_other 0 0
+# EOS
 
-mount -a
+# mount -a
