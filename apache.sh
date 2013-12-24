@@ -16,6 +16,8 @@ sed -i -e 's#ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"#\#ScriptAlias /cgi-bin/ "
 sed -i -e 's#Alias /error/ "/var/www/error/"#\#Alias /error/ "/var/www/error/"#g' $CONFIGFILE
 sed -i -e 's#ServerTokens.*#ServerTokens ProductOnly#g' $CONFIGFILE
 
+echo "FileETag none" >> $CONFIGFILE
+
 echo "Name VirtualHost on"
 sed -i -e 's#\#NameVirtualHost \*:80#NameVirtualHost *:80#g' $CONFIGFILE
 
@@ -33,8 +35,6 @@ cat << EOS > /etc/httpd/conf.d/notrace.conf
 # causes the core server and mod_proxy to return a 405 (Method not allowed)
 # error to the client.
 TraceEnable off
-
-FileETag none
 EOS
 chown apache:apache /etc/httpd/conf.d/notrace.conf
 
