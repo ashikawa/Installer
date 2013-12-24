@@ -33,6 +33,8 @@ cat << EOS > /etc/httpd/conf.d/notrace.conf
 # causes the core server and mod_proxy to return a 405 (Method not allowed)
 # error to the client.
 TraceEnable off
+
+FileETag none
 EOS
 chown apache:apache /etc/httpd/conf.d/notrace.conf
 
