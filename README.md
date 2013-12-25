@@ -185,3 +185,17 @@ chkconfig --list
 ```sh
 wget "https://raw.github.com/m-s-modified/Installer/master/ftp.sh" -O /tmp/ftp.sh && sh /tmp/ftp.sh
 ```
+
+
+## Nikto
+
+```
+cd /usr/local/src/
+wget http://www.cirt.net/nikto/nikto-current.tar.gz
+tar zxvf nikto-current.tar.gz
+cd nikto-2.1.5
+perl nikto.pl -update
+
+# Run
+perl nikto.pl -host http://localhost
+```
