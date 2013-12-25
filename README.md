@@ -51,6 +51,12 @@ wget "https://raw.github.com/m-s-modified/Installer/master/vhost.light.sh" -O vh
 wget "https://raw.github.com/m-s-modified/Installer/master/deflate.sh" -O /tmp/deflate.sh && sh /tmp/deflate.sh
 ```
 
+### Apache LTSV
+
+```sh
+wget "https://raw.github.com/m-s-modified/Installer/master/ltsv.sh" -O /tmp/ltsv.sh && sh /tmp/ltsv.sh
+```
+
 ## MySql
 
 ```sh
