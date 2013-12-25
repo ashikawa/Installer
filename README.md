@@ -199,3 +199,8 @@ perl nikto.pl -update
 # Run
 perl nikto.pl -host http://localhost
 ```
+
+
+## Munin
+
+https://gist.github.com/m-s-modified/3936605
