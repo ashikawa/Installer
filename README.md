@@ -152,6 +152,7 @@ mkdir /var/www/healthcheck
 cat << EOS  > /var/www/healthcheck/index.php
 <?php
 echo "success";
+?>
 EOS
 ```
 
