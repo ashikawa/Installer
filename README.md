@@ -179,8 +179,7 @@ vi /etc/httpd/cond.d/phpMyAdmin.conf
 ## Nginx
 
 ```sh
-# epel enabled=1
-yum -y install nginx
+yum --enablerepo=epel -y install nginx
 
 /etc/init.d/nginx start
 chkconfig nginx on
