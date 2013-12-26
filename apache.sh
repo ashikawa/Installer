@@ -16,6 +16,8 @@ sed -i -e 's#ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"#\#ScriptAlias /cgi-bin/ "
 sed -i -e 's#Alias /error/ "/var/www/error/"#\#Alias /error/ "/var/www/error/"#g' $CONFIGFILE
 sed -i -e 's#ServerTokens.*#ServerTokens ProductOnly#g' $CONFIGFILE
 
+sed -i -e 's#KeepAlive Off#KeepAlive On#g' $CONFIGFILE
+
 echo "FileETag none" >> $CONFIGFILE
 
 echo "Name VirtualHost on"
