@@ -84,7 +84,9 @@ wget "https://raw.github.com/m-s-modified/Installer/master/php.sh" -O /tmp/php.s
 ## WordPress
 
 ```
-curl http://wp-cli.org/installer.sh | bash
+sudo wget https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -O /usr/bin/wp
+sudo chmod +x /usr/bin/wp
+
 cd DOCUMENT_ROOT
 
 wp core download --locale=ja
