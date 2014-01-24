@@ -57,6 +57,10 @@ wget "https://raw.github.com/m-s-modified/Installer/master/deflate.sh" -O /tmp/d
 wget "https://raw.github.com/m-s-modified/Installer/master/ltsv.sh" -O /tmp/ltsv.sh && sh /tmp/ltsv.sh
 ```
 
+```sh
+vi /etc/httpd/conf.d/ltsv.conf
+```
+
 ## MySql
 
 ```sh
