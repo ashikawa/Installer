@@ -147,6 +147,12 @@ sed -i -e 's#PasswordAuthentication no#PasswordAuthentication yes#g' /etc/ssh/ss
 /etc/init.d/sshd restart
 ```
 
+TimeZone 変更
+
+```sh
+sudo cp /usr/share/zoneinfo/Japan /etc/localtime
+```
+
 HealthCheck
 
 ```sh
