@@ -198,6 +198,8 @@ chkconfig nginx on
 chkconfig --list
 ```
 
+http://qiita.com/kidachi_/items/985efebba639713c562e
+
 ## FTP
 
 ```sh
